@@ -81,8 +81,9 @@
  <div class="row" >
 
 
- <div class="col-sm-3">
+ 
         <div class="chipleft">
+        <div class="col-sm-2">
             <b>Tillgängligt belopp</b><br />
             <span id='money' class='money'>500</span>
             <div class='clear'></div>
@@ -91,11 +92,13 @@
 
 
   <div class='betting-area'>
-         <div class="col-sm-3">
+         <div class="col-sm-2">
             <b>Du satsar</b><br />
-            <div id='bet' class='bet money'>0</div>
+            <div id='bet' class='betmoney'>0</div>
         </div>
-         <div class="col-sm-3">
+
+
+         <div class="col-sm-2">
             <div class="chip">
             <div class='btn' id='less'><img src="images/chipdelete.png" alt="+" height="52" width="52"></div>
                 <div class='btn' id='more'><img src="images/chipplus.png" alt="+" height="52" width="52"></div>
@@ -106,7 +109,7 @@
         </div>
 
 
-    <div class="col-sm-3">  
+    <div class="col-sm-2">  
         <div class='buttons'>
      
           <button type="button" id='hit' class="btn btn-primary btn-sm">Kör</button>
@@ -116,10 +119,28 @@
         
         <div class='clear'></div>
 
-      </div>
-      <div class="knapp">
+   </div>
+
+    <div class="col-sm-2">  
+      <div class="knapphem">
        <a href="index.html" type="button" class="btn btn-secondary btn-sm">Hem</a>
        </div>
+      </div> 
+    
+
+<div class="col-sm-2">  
+<audio id="music" preload="true" loop autoplay>
+  <source src="backgroundmusic.mp3">
+   Din webbläsare stödjer inte denna ljudfil
+          >
+    </audio>
+
+<div id="audioplayer">
+    <button id="pButton" class="play" class="btn btn-secondary btn-sm" onclick="play()"></button>
+   
+         </div>
+</div>           
+
      </div> <!--stänger row-->
 </footer>
  </div>
