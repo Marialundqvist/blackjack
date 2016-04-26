@@ -1,148 +1,102 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-<title>Blackjack Spel</title>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="style.css" rel="stylesheet" type="text/css">
-
-<script src="js/jquery.js" type="text/javascript" charset="UTF-8"></script>
-<script src="js/blackjack.js" type="text/javascript" charset="UTF-8"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-   <style type="text/css">
-
-
+   <head>
+      <title>Blackjack Spel</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <script src="js/jquery.js" type="text/javascript" charset="UTF-8"></script>
+      <script src="js/blackjack.js" type="text/javascript" charset="UTF-8"></script>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <link rel="icon" type="img/x-icon"
+         href="favicon.ico"/>
+      <style type="text/css">
          @font-face {
          font-family: MyCustomFont;
          src: url("Sancreek-Regular.ttf") /* TTF file for CSS3 browsers */
          }
       </style>
-
-</head>
-<body>
-	<div class="container-fluid">
-  </div>
-<div class="jumbotron">
-
-<div class="cardbox">
-    <div class="row">
-        <div class="col-sm-12">
-
-
-
-
-                <div class='dealer-cards'>
-                    
-                    <div class='cardcard1'></div>
-                    
-                    <div class='card flipped card2'></div>
-                    
-                    <div class='new-cards'></div>
-                    
-                    <div class='clear'></div>
-                    
-                    <div id='dealerTotal' class='dealer-total'></div>
-                    
-                </div>
-                
-                <div class='clear'></div>
-                  <div id='message' class='message'></div>  
-                
-                <div class='player-cards'>
-                    
-                    <div class='cardcard1'></div>
-                    
-                    <div class='card card2'></div>
-                	
-                    <div class='new-cards'></div>
-                    
-                	<div class='clear'></div>
-                    
-                    <div id='playerTotal' class='player-total'></div>
-                      
-                </div>
-
-        </div> 
-       </div>
-     </div>  
-   </div>  <!--stänger jumbotron-->
-   </div> 
-<footer>
- <div class="row" >
-
-
- 
-        <div class="chipleft">
-        <div class="col-sm-2">
-            <b>Tillgängligt belopp</b><br />
-            <span id='money' class='money'>500</span>
-            <div class='clear'></div>
-        </div> 
-          </div>
-
-
-  <div class='betting-area'>
-         <div class="col-sm-2">
-            <b>Du satsar</b><br />
-            <div id='bet' class='betmoney'>0</div>
-        </div>
-
-
-         <div class="col-sm-2">
-            <div class="chip">
-            <div class='btn' id='less'><img src="images/chipdelete.png" alt="+" height="52" width="52"></div>
-                <div class='btn' id='more'><img src="images/chipplus.png" alt="+" height="52" width="52"></div>
-                
+   </head>
+   <body>
+      <div class="container-fluid">
+      </div>
+      <div class="cardbox">
+         <div class="jumbotron">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class='dealer-cards'>
+                     <div class='cardcard1'></div>
+                     <div class='card flipped card2'></div>
+                     <div class='new-cards'></div>
+                     <div class='clear'></div>
+                     <div id='dealerTotal' class='dealer-total'></div>
+                  </div>
+                  <div class='clear'></div>
+                  <div id='message' class='message'></div>
+                  <div class='player-cards'>
+                     <div class='cardcard1'></div>
+                     <div class='card card2'></div>
+                     <div class='new-cards'></div>
+                     <div class='clear'></div>
+                     <div id='playerTotal' class='player-total'></div>
+                  </div>
+               </div>
             </div>
-            <div class='clear'></div>
-        </div>
-        </div>
-
-
-    <div class="col-sm-2">  
-        <div class='buttons'>
-     
-          <button type="button" id='hit' class="btn btn-primary btn-sm">Kör</button>
-          <button type="button" id='stand'  class="btn btn-secondary btn-sm">Stanna</button>
-    	</div>
-
-        
-        <div class='clear'></div>
-
-   </div>
-
-    <div class="col-sm-2">  
-      <div class="knapphem">
-       <a href="index.html" type="button" class="btn btn-secondary btn-sm">Hem</a>
-       </div>
-      </div> 
-    
-
-<div class="col-sm-2">  
-<audio id="music" preload="true" loop autoplay>
-  <source src="backgroundmusic.mp3">
-   Din webbläsare stödjer inte denna ljudfil
-          >
-    </audio>
-
-<div id="audioplayer">
-    <button id="pButton" class="play" class="btn btn-secondary btn-sm" onclick="play()"></button>
-   
          </div>
-</div>           
-
-     </div> <!--stänger row-->
-</footer>
- </div>
-</body>
-</html> 
+         <!--stänger jumbotron-->
+      </div>
+      <footer>
+         <div class="jumbotron">
+            <div class="row" >
+               <div class="chipleft">
+                  <div class="col-sm-2">
+                     <b>Tillgängligt belopp</b><br />
+                     <span id='money' class='money'>500</span>
+                     <div class='clear'></div>
+                  </div>
+               </div>
+               <div class='betting-area'>
+                  <div class="col-sm-2">
+                     <b>Du satsar</b><br />
+                     <div id='bet' class='betmoney'>0</div>
+                  </div>
+                  <div class="col-sm-2">
+                     <div class="chip">
+                        <div class='btn' id='less'><img src="images/chipdelete.png" alt="-" height="52" width="52"></div>
+                        <div class='btn' id='more'><img src="images/chipplus.png" alt="+" height="52" width="52"></div>
+                     </div>
+                     <div class='clear'></div>
+                  </div>
+               </div>
+               <div class="col-sm-2">
+                  <div class='buttons'>
+                     <button type="button" id='hit' class="btn btn-primary btn-sm">Kör</button>
+                     <button type="button" id='stand'  class="btn btn-secondary btn-sm">Stanna</button>
+                  </div>
+                  <div class='clear'></div>
+               </div>
+               <div class="col-sm-2">
+                  <div class="knapphem">
+                     <a href="index.html" type="button" class="btn">Hem</a>
+                  </div>
+               </div>
+               <div class="col-sm-2">
+                  <audio id="music" preload="true" loop autoplay>
+                     <source src="backgroundmusic.mp3">
+                     Din webbläsare stödjer inte denna ljudfil
+                     >
+                  </audio>
+                  <div id="audioplayer">
+                     <button id="pButton" class="play" class="btn btn-secondary btn-sm" onclick="play()"></button>
+                  </div>
+               </div>
+            </div><!--stänger row-->
+         </div>
+      </footer>
+   </body>
+</html>
